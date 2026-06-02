@@ -196,6 +196,16 @@
 
 
 
+#sum of numbers#
+# a=int(input())
+# b=int(input())
+# if a>b:
+#     print("invalid range")
+# else:
+#     sum=0
+#     for i in range(a,b+1):
+#         sum=sum+i
+# print(sum)
 
 
 
