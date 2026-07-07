@@ -210,6 +210,86 @@
 
 
 
+  #factors##                              ##prime numbers##
+# n=int(input())
+# fc=0
+# for i in range(1,n+1):
+#     if n%i==0:
+#         fc=fc+1
+#         print(i)
+
+n = 9
+# fc = 0
+# for i in (1,n+1):
+#     if n % i == 0:
+#         fc = fc + 1
+# if fc==2:
+#     print('prime')
+# else:
+#     print('not prime')
+
+#
+# n=5
+# for i in range(n-1,0,-1):
+#     fc=0
+#     for j in range(1,i+1):
+#         if i%j==0:
+#             fc=fc+1
+#     if fc==2:
+#         print(i)
+#         break
+
+#
+# n=5
+# for i in range(n+1,n*n):
+#     fc=0
+#     for j in range(1,i+1):
+#         if i%j==0:
+#             fc=fc+1
+#     if fc==2:
+#         print(i)
+#         break
+#
+#
+# n=7
+# l=[0,1,4,5,7,2,8]
+# if n in l:
+#     print("fibonacci")
+# else:
+#     print("not fibonacci")
+
+
+
+n=5
+if n>0:
+    for i in range(n-1,0,-1):
+        fc=0
+        for j in range(1,i+1):
+            if i%j==0:
+                fc=fc+1
+        if fc==2:
+            min=i
+if n>0:
+    for k in range(n-1,0,-1):
+        fc=0
+        for l in range(1,k+1):
+            if k%l==0:
+                fc=fc+1
+        if fc==2:
+            max=k
+            break
+if (n-min)<(max-n):
+    print(min)
+else:
+    print(max)
+
+
+
+
+
+
+
+
 
 
 
