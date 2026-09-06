@@ -62,7 +62,7 @@ e1=Employee("rama")
 e2=Employee("devi")
 print(e1.company_name)
 print(e2.company_name)
-Employee.change_company("Delloitte")
+Employee.change_company("Deloitte")
 print(e1.company_name)
 print(e2.company_name)
 
@@ -252,6 +252,89 @@ Student.update_passing_marks(35)
 s1.result()
 s2.result()
 s3.result()
+
+
+
+#pdf-2#
+## question 10 ##
+
+class Member:
+    limit=24
+    def __init__(self,name,height,weight):
+        self.name=name
+        self.height=height
+        self.weight=weight
+    def BMI_cal(self):
+        cal=self.weight/(self.height/100)**2
+        print(cal)
+        if cal>Member.limit:
+            print("un-fit")
+        elif cal<(Member.limit-7):
+            print("underweight")
+        else:
+            print("fit")
+    @classmethod
+    def update_bmi(cls,new):
+        cls.limit=new
+    @staticmethod
+    def valid(h,w):
+        return 60<=h<=300 and 20<=w<=200
+m1=Member("rama",5.5,45)
+m2=Member("devi",5.7,50)
+m3=Member("sri",6,70)
+m1.BMI_cal()
+m2.BMI_cal()
+m3.BMI_cal()
+
+Member.update_bmi(35)
+m3.BMI_cal()
+
+
+## question 9 ##
+
+# class LibraryMember:
+#     total_members=0
+#     borrow_limit=5
+#     def __init__(self,name):
+#         self.name=name
+#         self.books_borrow=books_borrow
+#
+#
+#
+# ## question 7 ##
+#  class Inventory:
+#      total_items=0
+#      def __init__(self):
+#          self.stock={}
+
+
+class Vector:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __add__(self,n):
+        return Vector(self.x+n.x,self.y+n.y)
+    def __sub__(self,n):
+        return Vector(self.x-n.x,self.y-n.y)
+    def __mul__(self,n):
+        return Vector(self.x*n.x,self.y*n.y)
+    def __truediv__(self,n):
+        return Vector(self.x/n.x,self.y/n.y)
+    def __mod__(self,n):
+        return Vector(self.x%n.x,self.y%n.y)
+    def __str__(self):
+        return
+v1=Vector(10,18)
+v2=Vector(15,7)
+v3=Vector(3,5)
+print(v1)
+
+
+
+
+
+
+
 
 
 
